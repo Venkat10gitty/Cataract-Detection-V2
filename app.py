@@ -76,6 +76,6 @@ if uploaded_file is not None:
             st.subheader("Doctor's Verification 🩺")
             st.markdown(f"[Click here to provide feedback on the cataract detection results]({google_form_link})", unsafe_allow_html=True)
         else:
-            st.error("Please upload a relevant eye image.")
+            st.error("Sorry, uploaded image is not clear.")
         
 
