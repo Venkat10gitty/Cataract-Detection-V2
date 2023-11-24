@@ -1,0 +1,11 @@
+numpy
+torch
+torchvision
+opencv-python==4.5.5.64
+matplotlib
+scikit-learn==1.2.2
+scikit-image
+streamlit
+pillow
+plotly
+opencv-python-headless==4.5.4.60
