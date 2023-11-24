@@ -58,7 +58,7 @@ if uploaded_file is not None:
     if st.button('Detect'):
         if(confidence > 0.7):
             if prediction == 0:
-                st.markdown(f"<h2 style='color: red;'>Cataract Detected 😟</h2>", unsafe_allow_html=True)
+                st.markdown(f"<h2 style='color: red;'>Cataract Detected </h2>", unsafe_allow_html=True)
                 fig = go.Figure(data=[go.Pie(labels=['Cataract', 'No Cataract'], 
                                             values=[confidence, 1 - confidence],
                                             hoverinfo='label+percent', 
@@ -66,7 +66,7 @@ if uploaded_file is not None:
                 fig.update_layout(title_text='Cataract Detection Probability')
                 st.plotly_chart(fig)
             else:
-                st.markdown(f"<h2 style='color: green;'>No Cataract Detected 😄</h2>", unsafe_allow_html=True)
+                st.markdown(f"<h2 style='color: green;'>No Cataract Detected </h2>", unsafe_allow_html=True)
                 fig = go.Figure(data=[go.Pie(labels=['Cataract', 'No Cataract'], 
                                             values=[1-confidence, confidence],
                                             hoverinfo='label+percent', 
