@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from torchvision import transforms
 import plotly.graph_objects as go
 
-google_form_link = 'https://docs.google.com/forms/d/1xKeveRFf90_wCX-tjMInFC48XmFF8HOsPSQ47ruOFk0/edit'
+google_form_link = 'https://forms.gle/JVBEEKRGmKhCs8HZ6'
 
 # Function to load the model
 def load_model():
