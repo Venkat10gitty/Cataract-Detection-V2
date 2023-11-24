@@ -10,7 +10,7 @@ google_form_link = 'https://forms.gle/JVBEEKRGmKhCs8HZ6'
 
 # Function to load the model
 def load_model():
-    model = torch.load('resnet_18.pth', map_location=torch.device('cpu'))
+    model = torch.load('efficientnet_model.pth', map_location=torch.device('cpu'))
     model.eval()
     return model
 
