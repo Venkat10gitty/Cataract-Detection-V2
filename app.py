@@ -53,6 +53,25 @@ uploaded_file = st.file_uploader("", type=["jpg", "jpeg", "png"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert('RGB')
     st.image(image, caption='Uploaded Eye Image', use_column_width=True)
+
+    # Cropping functionality
+    st.write("Select the area to crop:")
+
+    # Horizontal crop sliders
+    col1, col2 = st.columns(2)
+    with col1:
+        x1, x2 = st.slider("Select horizontal range for cropping", 0, image.width, (0, image.width))
+
+    # Vertical crop sliders
+    with col2:
+        y1, y2 = st.slider("Select vertical range for cropping", 0, image.height, (0, image.height))
+
+    # Apply cropping
+    cropped_image = image.crop((x1, y1, x2, y2))
+
+    # Display cropped image
+    st.image(cropped_image, caption='Cropped Image', use_column_width=True)
+    
     processed_image = process_image(image)
     prediction, confidence = predict(model, processed_image)
     if st.button('Detect'):
